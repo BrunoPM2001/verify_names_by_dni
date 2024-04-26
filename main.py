@@ -21,7 +21,6 @@ div = soup.find('div', { 'id' : 'resultado_busqueda' })
 datos = div.find_all('p', recursive=True)
 
 try:
-    
   bs_nombre = BeautifulSoup(str(datos[2]), 'html.parser')
   p_nombre = bs_nombre.find('p')
   nombre = ''.join(p_nombre.find_all(string=True, recursive=False))
